@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIVA Style Product Grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f8f8f8;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .product-grid {
+            display: grid;
+            gap: 20px;
+        }
+        .product {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+            height: auto;
+        }
+        .product-info {
+            margin-top: 10px;
+        }
+        .product-title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .product-price {
+            color: #d6336c;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .shop-btn {
+            background-color: #d6336c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .shop-btn:hover {
+            background-color: #a72854;
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 767px) {
+            .product-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Silver Bracelets Collection</h1>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://www.giva.co/cdn/shop/products/BR0640_1-min.jpg?v=1669904843&width=713" alt="Bracelet 1">
+                <div class="product-info">
+                    <p class="product-title">Elegant Silver Bracelet</p>
+                    <p class="product-price">₹2,499</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://www.giva.co/cdn/shop/files/BR01087_5.jpg?v=1738847394&width=533" alt="Bracelet 2">
+                <div class="product-info">
+                    <p class="product-title">Classic Chain Bracelet</p>
+                    <p class="product-price">₹3,199</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://www.giva.co/cdn/shop/files/BR0341_5_a277db5f-2de3-402f-a4f5-5548dc1a431e.jpg?v=1712928322&width=533" alt="Bracelet 3">
+                <div class="product-info">
+                    <p class="product-title">Minimalist Bracelet</p>
+                    <p class="product-price">₹2,799</p>
+                    <button class="shop-btn">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
